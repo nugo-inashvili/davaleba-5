@@ -1,5 +1,6 @@
 package com.example.davaleba5
 
+import android.database.sqlite.SQLiteDatabase
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +9,7 @@ class ProductsAdapter (
     private val layoutInflater: LayoutInflater
     ) : RecyclerView.Adapter<ProductViewHolder>() {
         private val productData = mutableListOf<Product>()
-        fun setData(productData: List<Product>,db:List<ProductDBHelper>) {
+        fun setData(productData: List<Product>) {
             this.productData.clear()
             this.productData.addAll(productData)
             notifyDataSetChanged()

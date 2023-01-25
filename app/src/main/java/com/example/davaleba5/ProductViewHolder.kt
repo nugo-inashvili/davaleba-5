@@ -14,8 +14,8 @@ class ProductViewHolder(
     private val productPriceView: TextView
             by lazy { containerView.findViewById(R.id.product_price) }
     fun bindData(productData: Product) {
-        productIdView.text= productData.ID
+        productIdView.text= productData.ID.toString()
         productNameView.text = productData.PRODUCT_NAME
-        productPriceView.text = productData.PRICE
+        productPriceView.text = productData.PRICE.toString()+" "+"₾"
         }
     }
